@@ -1,0 +1,119 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&family=Playfair+Display:wght@400;500;600&family=Ubuntu:wght@300;400&display=swap');
+
+/*모바일*/
+@media (max-width:767px){}
+/*ipad*/
+@media (min-width:768px) and (max-width:1023px){}
+/*desktop*/
+@media (min-width:1024px) and (max-width:1400px){}
+
+
+html,body{
+    margin:0; font-size:20px;
+}
+a{text-decoration:none;}
+h1,h2,h3,p,figure{margin:0;}
+ul,li{list-style-type: none; margin:0; padding:0;}
+*{
+    box-sizing:border-box;
+    font-size:1rem;
+    text-transform:uppercase;
+    font-family:'inter'
+}
+img{vertical-align: middle;}
+
+.info>h2{
+    color:#000;
+    font-weight:normal;
+}
+.info>b{
+    color:#000;
+    font-weight:100;
+    font-size:2.3rem;
+}
+
+
+/* header */
+header{
+    width:100%;
+    margin:0 auto ;
+    padding-top:15px;
+    background-color:#fff;
+    position:fixed;
+    left:0;top:0;
+    z-index:999;
+}
+.header_wrap{
+    width:83%;
+    margin:0 auto;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left_nav{
+    width:40%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.left_nav>h1{
+}
+.left_nav>h1>a{    
+}
+.left_nav>nav{}
+.left_nav>nav>ul{    
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+}
+.left_nav>nav>ul>li{}
+.left_nav>nav>ul>li>a{
+    display:inline-block;
+    font-size:0.8rem;
+    padding:20px 40px;
+}
+.left_nav>nav>ul>li>div{
+    display:none;}
+
+.right_nav{
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+}
+.search{}
+.search>a{
+    display:inline-block;
+    font-size:0.8rem;
+    padding:10px 20px;
+    margin-right:20px;
+}
+.search>div{}
+.top_menu{}
+.top_menu>ul{
+    display:flex;
+    justify-content: space-between;
+    align-items:flex-end;
+}
+.top_menu>ul>li{}
+.top_menu>ul>li>a{
+    display:inline-block;
+    font-size:0.8rem;
+    padding:15px 10px;
+}
+.login{}
+
+
+
+
+
+/*footer*/
+footer{width:100%;}
+footer>p{
+    width:100%;
+    margin:0 auto;
+    border-top:solid 1px #000;
+}
+footer>p>img{
+}
