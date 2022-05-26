@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./basic.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- 
+        태그 자동정렬 (alt + shift + f)
+        들여쓰기(Tab)
+        내여쓰기(Shift + Tab)
+        
+        찾기(Ctrl + f)
+        바꾸기(Ctrl + h)
+        줄이동(Ctrl + g)
+
+        뒤로 이동(Ctrl + z)
+        앞으로 이동(Ctrl +_)
+
+        *부모, 자식, 후손
+    -->
+    <header> header </header>
+    <main> main </main>
+    <footer> footer </footer>
+
+
+    <article>
+        <h2>block 요소</h2>
+        <p>특징) 줄내리기 효과, 가로 사용할 수 있는 전체 가로영역 설정, h와 p태그의 자손태그로 block태그 사용 불가</p>
+            h1~h6 : 타이틀 태그 (숫자가 커질 수록 타이틀 비중 적음)<br>
+            div : box형태의 콘텐츠를 그룹<br>
+            article : box형태의 콘텐츠를 그룹 (조건: 자식으로 h태그를 반드시 작성해야함)<br>
+            p : 문서의 단락이 되는 콘텐츠 그룹<br>
+            ul,li : 순서가 없는 목록 or 리스트 콘텐츠에 사용<br>
+            
+        <div class="ex">
+            <div>
+                <h1>가장 큰 타이틀 (문서에 한 번만 사용)</h1>
+                <h2>두번째로 큰 타이틀</h2>
+                <h3>세번째로 큰 타이틀</h3>
+                <h4>네번째로 큰 타이틀</h4>
+                <h5>다섯번째로 큰 타이틀</h5>
+                <h6>여섯번째로 큰 타이틀</h6>
+            </div>
+            <p>텍스트 또는 이미지 태그를 만들 때 사용</p>
+            <ul>
+                <li>리스트 형식의 콘텐츠를 만들 때 사용</li>
+                <li>여백과 불릿을 기본값으로 설정하고 있다</li>
+                <li>콘텐츠 유형(메뉴, 카드형 콘텐츠, 게시판 리스트...)</li>
+            </ul>
+        </div>
+    </article>
+    <!-- inline -->
+    <article>
+        <h2>inline 요소</h2>
+        <p>
+            *특징*<br>
+            한줄내리기 없음<br>
+            콘텐츠의 크기만큼 가로영역 설정<br>
+            inline요소 안에 block요소 사용 금지<br>
+            style명령 : 사이즈와 여백 사용 못함<br>
+        </p>
+        <div>
+            span : 인라인 요소들 그룹<br>
+            img : 이미지 URL 호출<br>
+            a : 다른 문서로 이동 (링크)<br>
+            strong,b : 텍스트 bold<br>
+            i, em : 텍스트 italic<br>
+            mark : 텍스트 배경색 생성<br>
+        </div>
+        <div class="ex">
+            <span>
+                텍스트, 이미지와 같은 <b>inline</b> 콘텐츠를 그룹
+            </span>
+            <img src="./sns.jpeg    " alt="이미지 제목 또는 요약설명">
+            <a href="http://www.naver.com" target="_blank">
+                <em>네이버</em>로 이동
+            </a>
+            <ul>
+                <li>
+                    <strong>strong 강조(bold)</strong>
+                </li>
+                <li>
+                    <b>b(bold)</b>
+                </li>
+                <li>
+                    <em>em 강조(italic)</em>
+                </li>
+                <li>
+                    <i>i(italic)</i>
+                </li>
+                <li>
+                    <mark>mark 배경색으로 강조</mark>
+                </li>
+            </ul>
+        </div>
+    </article>
+
+    [상대경로]
+        - 현재폴더 (./) <!-- 생략 가능 -->
+        - 상위폴더 (../)
+        - 경로를 작성하는 파일 기준
+
+    [절대경로]
+        - 루트root (/)
+        - 시스템경로 (F://)
+        - 프로토콜 (http://)
+        - 페이지나 파일이 가지고 있는 고유한 경로
+        - 호출하는 문서의 위치 상관 없음
+</body>   
+
+</html>
