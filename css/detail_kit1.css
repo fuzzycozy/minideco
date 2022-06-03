@@ -1,0 +1,242 @@
+@import url(common.css);
+
+
+
+
+
+
+
+/*======== recommended items===========================================*/
+.recom {
+    width: 100%;
+    position: relative;
+}
+
+.recom::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 10%;
+    background: linear-gradient(to right, #e0e0e0, rgba(224, 224, 224, 0));
+    display: block;
+    transform: translateX(100%);
+    z-index: -1;
+    animation: ani_recom1 .8s linear forwards;
+}
+
+.recom_wrap {
+    width: 83%;
+    margin: 6% auto 0;
+}
+
+.recom_wrap>.info {}
+
+.recom_slide {}
+
+.recom_slide>ul {
+    display: flex;
+    justify-content: space-between;
+    overflow-x: auto;
+}
+
+
+.recom_slide>ul>li {
+    width: 29%;
+    padding: 10px 30px 30px 0;
+    flex-shrink: 0;
+}
+
+.recom_item {
+    position: relative;
+}
+
+.recom_item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+
+.recom_hov {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: rgba(82, 82, 82, 0.8);
+    text-align: center;
+    display: none;
+}
+
+.recom_hov>a:nth-of-type(1) {
+    display: inline-block;
+    width: 55px;
+    height: 55px;
+    margin: 10px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 0;
+    background: url(../img/icon.png) no-repeat;
+    background-position: 0 -30px;
+}
+
+.recom_hov>a>p {
+    width: 100%;
+    color: #fff;
+    white-space: pre-line;
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%, -50%);
+}
+
+.recom_hov>a>p>b {
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: normal;
+    white-space: pre-line;
+}
+
+.recom_hov>a>p>span {
+    text-decoration-line: line-through;
+    color: #c4c4c4;
+}
+
+.btn_qv {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 12%;
+    background-color: #525252;
+    border-radius: 10px;
+    z-index: 2;
+}
+
+.btn_qv>p {
+    text-align: center;
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+.recom_item:hover>img{filter:blur(2px)}
+.recom_item:hover>.recom_hov {
+    display: block;
+}
+
+.recom_hov>a:nth-child(2)>p:hover{transform:translate(-50%, -50%) scale(1.1)}
+.recom_hov>a:nth-child(2)>p:active{transform:translate(-50%, -50%) scale(0.5);transition:.5s}
+
+
+.btn_qv:hover>p {transform:scale(1.1)}
+.btn_qv:active>p {transform:scale(0.5);transition:.3s}
+
+@keyframes ani_recom1 {
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+/*======== recently items===========================================*/
+.rct{
+    width:100%;
+    position:relative;
+}
+.rct::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 10%;
+    background: linear-gradient(to right, rgb(224, 224, 224), rgba(224, 224, 224, 0));
+    display: block;
+}
+
+.rct_wrap{
+    width:83%;
+    margin:6% auto 0;
+}
+
+
+.rct_slide{position:relative;}
+
+.rct_btn>a{
+    position:absolute;
+    display:inline-block;
+    font-size:0;
+    width:40px; height:40px;
+    background:url(../img/icon.png);
+}
+.rct_btn>a:nth-of-type(1){
+    left:0;top:50%;
+    transform:translateY(-50%);
+    background-position:-210px -30px;
+}
+.rct_btn>a:nth-of-type(2){
+    top:50%; right:0;
+    transform:translateY(-50%);
+    background-position:-255px -30px;
+}
+
+.rct_slide>ul{
+    width:85%;
+    margin:2% auto;
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+}
+.rct_slide>ul>li{
+    width:17%;
+    position:relative;
+}
+.rct_item{}
+.rct_item>img{
+    width:100%;
+    border-radius:10px;
+}
+.rct_item>div{
+    display:none;
+    width:100%;height:100%;  
+    position:absolute;
+    left:0;top:0;
+    background-color:rgba(82, 82, 82, 0.8);
+    border-radius:10px;
+}
+.rct_item>div>a:nth-child(1){
+    position:absolute;
+    top:0;right:0;
+    font-size:0;
+    display:inline-block;
+    width:40px;height:40px;
+    background:url(../img/icon.png) -120px -30px;
+}
+.rct_item>div>a>p{
+    width:100%;
+    position:absolute;
+    left:0;top:50%;
+    transform:translateY(-50%);
+    white-space:pre-line;
+    text-align:center;
+    color:#fff;
+    font-size:0.8rem;
+}
+.rct_item>div>a>p>b{}
+
+.rct_item:hover>img{filter:blur(2px);}
+.rct_item:hover>div{display:block;}
+.rct_item>div>a>p:hover{transform:translateY(-50%) scale(1.1);}
+
