@@ -9,10 +9,29 @@
 .visual {
     width: 100%;
     margin-top: 80px;
+    position:relative;
 }
 
 .visual>img {
     width: 100%;
+}
+.visual>figcaption{
+    overflow:hidden;
+    position:absolute;
+    left:0%; top:50%;
+    width:100%;
+    transform:translate(0%, -50%);
+}
+.visual > figcaption > p {
+    color:#e5e5e5;
+    font-size:6.5rem;
+    font-weight:100;
+    text-align: center;
+    transform:translateY(100%);
+    animation: ani_visual .7s linear forwards;
+}
+@keyframes ani_visual{
+    100%{transform:translateY(0%)};
 }
 
 /* new */
@@ -26,7 +45,11 @@
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    animation: ani_new1 .5s .5s linear forwards;
+    filter:brightness(50%) blur(2px);
+    
+}
+.new.active{
+    animation: ani_new1 .5s linear forwards;
 }
 
 .new>figure {
@@ -36,18 +59,21 @@
 .new>figure>img {
     width: 100%;
     border-radius: 10px 10px 0 0;
+    
 }
 
 .new>.info_new {
     width: 50%;
     text-align: center;
+    opacity:0;
+}
+.new>.info_new.active {
+    animation: ani_new2 .5s .5s linear forwards;
 }
 
 .new>.info_new>h2 {
     font-size: 4.5rem;
-    font-weight: 100;
-    transform: translate(8px, 8px);
-    animation: ani_new2 .5s 1s linear forwards;
+    font-weight: 100;    
 }
 
 .new>.info_new>p {
@@ -109,13 +135,13 @@
 @keyframes ani_new1 {
     100% {
         background: radial-gradient(at 50% 15%, rgba(224, 224, 224, 0), #e0e0e0 40%);
+        filter:brightness(100%)
     }
 }
 
 @keyframes ani_new2 {
     100% {
-        transform: translate(0, 0);
-        text-shadow: 8px 8px 2px rgba(0, 0, 0, 0.3);
+        opacity:1
     }
 }
 
@@ -125,13 +151,13 @@
     position: relative;
 }
 
-.hot::after {
+.hot > p.active {
     content: '';
     width: 100%;
     height: 100%;
     position: absolute;
     left: 0;
-    top: 10%;
+    top: 0;
     background: linear-gradient(to right, #e0e0e0, rgba(224, 224, 224, 0));
     display: block;
     transform: translateX(100%);
@@ -141,21 +167,33 @@
 
 .hot_wrap {
     width: 83%;
-    margin: 6% auto 0;
+    margin: 13% auto 0;
 }
 
-.hot_wrap>.info {}
+.hot_wrap>.info{
+    position:absolute;
+    top:-20%
+}
+.hot_wrap>.info.active{
+    
+    animation: ani_info .5s .8s linear forwards;
+}
 
-.hot_slide {}
+.hot_slide {
+    padding:2% 0;
+}
 
-.hot_slide>ul {
-    display: flex;
+.hot_slide ul:first-of-type(1) {
+    /* display: flex; */
     justify-content: space-between;
-    overflow-x: auto;
+    opacity:0;
+}
+.hot_slide>ul:first-of-type(1).active{
+    animation: slide_items 1.5s 1s linear forwards;
 }
 
 
-.hot_slide>ul>li {
+.hot_slide ul:first-of-type(1) li {
     width: 29%;
     padding: 10px 30px 30px 0;
     flex-shrink: 0;
@@ -271,7 +309,7 @@
     position: relative;
 }
 
-.media::after {
+.media>p.active {
     content: '';
     display: block;
     position: absolute;
@@ -295,13 +333,19 @@
 .media>.info {
     padding-top: 16px;
     padding-right: 17%;
-    animation: ani_media2 .5s 1.3s linear forwards;
+    transform: translate(-6px, -6px);
+    opacity:0;
 }
 
 @keyframes ani_media2 {
-    100% {
-        transform: translate(-6px, -6px);
+    0% {
+        opacity:1;
         text-shadow: 6px 6px 2px rgba(0, 0, 0, 0.3);
+    }
+    100% {
+        opacity:1;
+        transform:translate(0,0);
+        text-shadow:none;
     }
 }
 
@@ -333,29 +377,14 @@
     background: url(../img/icon.png);
     font-size: 0;
     margin: 20px;
-}
-
-.indi>a:nth-child(1) {
-    background-position: -150px 0;
-}
-
-.indi>a:nth-child(2) {
     background-position: -180px 0;
 }
+.indi>a.active{ background-position: -150px 0;}
 
-.indi>a:nth-child(3) {
-    background-position: -180px 0;
-}
 
-.indi>a:nth-child(4) {
-    background-position: -180px 0;
-    margin-right: 0;
-}
 
 .vid {
     width: 100%;
-    animation: ani_media3 .5s 0.8s linear forwards;
-    opacity: 0;
 }
 
 .vid>ul>li>iframe {
@@ -364,25 +393,34 @@
     position: absolute;
     right: 0;
     top: 50%;
-    transform: translate(-83%, -50%);
+    transform:translate(100%, -50%);
+    animation: ani_media4 .3s linear forwards;
+    
+}
+
+.vid>ul>li>iframe.active{
+    animation: ani_media5 .5s 0.5s linear forwards
+}
+@keyframes ani_media4 {
+    0%{transform: translate(-83%,-50%)};
+    100%{transform:translate(100%, -50%)};
+}
+@keyframes ani_media5{
+    100%{transform: translate(-83%,-50%)};
 }
 
 .vid>ul>li>p {
+    position:absolute;
+    right:0;
+    bottom:0;
+    transform:translateY(-100%);
     padding-right: 17%;
     color: #c4c4c4;
     font-size: 1.8rem;
+    opacity: 0;
 }
-
-.media .vid>ul>li:nth-child(2) {
-    display: none;
-}
-
-.media .vid>ul>li:nth-child(3) {
-    display: none;
-}
-
-.media .vid>ul>li:nth-child(4) {
-    display: none;
+.vid>ul>li>p.active {
+    opacity:1;
 }
 
 @keyframes ani_media3 {
@@ -395,7 +433,11 @@
 /*sns*/
 .sns {
     width: 83%;
-    margin: 6% auto 1%;
+    margin: 10% auto 1%;
+}
+.sns>.info.active{
+    
+    animation: ani_info .5s .5s linear forwards;
 }
 
 .sns>.icon {
@@ -414,6 +456,10 @@
     width: 70px;
     height: 70px;
     background: url(../img/icon.png);
+    opacity:0
+}
+.sns>.icon>div>a.active {
+    animation: ani_sns2 .5s 1s linear forwards;
 }
 
 .sns>.icon>div:nth-child(1)>a {
@@ -436,12 +482,25 @@
     font-size: 1.2rem;
     font-weight: 200;
     color: #000;
+    opacity:0
+}
+.sns>.icon>div>p.active{
+    animation: ani_sns1 .5s .8s linear forwards;
 }
 
 .icon>div>a:hover{transform:scale(1.1)}
-.icon>div>a:active{transform:scale(0.5);transition:.3s}
 
-/*
-- 애니메이션 화면에 나올 때 동작하는 방법
-- 서브메뉴 호버 구상 방법
-*/
+@keyframes ani_sns1 {
+    100%{opacity:1}
+}
+
+@keyframes ani_sns2 {
+    0%{
+        opacity:1;
+        transform:scale(0)
+    }
+    100%{
+        opacity:1;
+        transform:scale(1)
+    }
+}

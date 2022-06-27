@@ -16,6 +16,7 @@ body {
     margin: 0;
     font-size: 20px;
 }
+main{overflow:hidden;}
 
 a {
     text-decoration: none;
@@ -48,14 +49,17 @@ img {
 }
 
 .info {
-    transform: translate(6px, 6px);
-    animation: ani_info .5s .8s linear forwards;
+    transform: translate(-6px, -6px);
+    opacity:0;
+    text-shadow: 6px 6px 2px rgba(0, 0, 0, 0.3);
 }
 
 @keyframes ani_info {
+    0%{opacity:1;}
     100% {
+        opacity:1;
         transform: translate(0, 0);
-        text-shadow: 6px 6px 2px rgba(0, 0, 0, 0.3);
+        text-shadow:none;
     }
 }
 
@@ -68,6 +72,10 @@ img {
     color: #000;
     font-weight: 100;
     font-size: 3rem;
+}
+
+@keyframes slide_items{
+    100%{opacity:1;}
 }
 
 
@@ -189,17 +197,27 @@ header {
 .sub_wrap>div {
     width: 100%;
     background-color: #fff;
+    border-radius:0 0 10px 10px;
     position: absolute;
     left: 100%;
     top: 100%;
     padding-left: 25%;
     opacity: 0.9;
 }
+.sub_wrap > div.active{animation: ani_menu .5s linear forwards}
+
+@keyframes ani_menu{
+    100%{transform:translateX(-100%)}
+}
 
 .sub_wrap>div>a {
     color: #525252;
     display: inline-block;
     padding: 10px;
+}
+.sub_wrap>div>a:hover{
+    color:#000;
+    transform:scale(1.1);
 }
 
 
@@ -229,7 +247,7 @@ footer>p>img {
 
 /* quick view */
 .qv {
-    position: fixed;
+    position:fixed;
     left: 0;
     top: 0;
     width: 100%;
@@ -239,6 +257,7 @@ footer>p>img {
     z-index: 999;
     display:none;
 }
+.qv.active{display:block}
 
 .qc_wrap {
     position: absolute;
@@ -304,7 +323,7 @@ footer>p>img {
     position: relative;
 }
 
-.qv_right>a {
+.qv_right> .qvX {
     display: inline-block;
     width: 25px;
     height: 25px;

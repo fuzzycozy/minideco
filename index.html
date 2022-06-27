@@ -7,9 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MINI DECO</title>
     <link href="css/index.css" rel="stylesheet">
+    <link href="css/slick.css" rel="stylesheet"> 
+    <link href="css/slick-theme.css" rel="stylesheet">
     <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+    <script src="js/slick.min.js" type="text/javascript" charset="utf-8"></script>
+    <script defer src="js/common.js"></script>
 </head>
 
 <body>
@@ -17,7 +22,7 @@
         <div class="header_wrap">
             <div class="left_nav">
                 <h1>
-                    <a href="#"><img src="img/logo.jpg" alt=""></a>
+                    <a href="index.html"><img src="img/logo.jpg" alt=""></a>
                 </h1>
                 <nav>
                     <ul>
@@ -55,20 +60,20 @@
             </div>
         </div>
         <div class="sub_wrap">
-            <div>
+            <div class="sub">
                 <a href="#">new</a>
                 <span>&middot;</span>
                 <a href="#">DIY kit</a>
                 <span>&middot;</span>
                 <a href="#">room box</a>
                 <span>&middot;</span>
-                <a href="#">furniture</a>
+                <a href="list_furn.html">furniture</a>
                 <span>&middot;</span>
                 <a href="#">accessory</a>
                 <span>&middot;</span>
                 <a href="#">sale</a>
             </div>
-            <div>
+            <div class="sub">
                 <a href="#">Notice</a>
                 <span>&middot;</span>
                 <a href="#">events</a>
@@ -86,7 +91,8 @@
 
     <main>
         <figure class="visual">
-            <img src="img/visual_1.jpg" alt="">
+            <img src="img/visual3.jpg" alt="">
+            <figcaption><p>build your dreams</p></figcaption>
         </figure>
 
         <div class="new">
@@ -115,6 +121,7 @@
                     <p>파올라레이나 제품 보러가기</p>
                 </a>
             </div>
+            <p></p>
         </div>
 
         <div class="hot">
@@ -130,7 +137,7 @@
                                 <img src="img/kit1_1.jpg" alt="">
                                 <div class="hot_hov">
                                     <a href="#">hrt</a>
-                                    <a href="#">
+                                    <a href="detail_kit1.html">
                                         <p>
                                             <b>
                                                 [ROBOTIME]
@@ -220,6 +227,98 @@
                                 </div>
                             </div>
                         </li>
+                        <li>
+                            <div class="hot_item">
+                                <img src="img/kit1_1.jpg" alt="">
+                                <div class="hot_hov">
+                                    <a href="#">hrt</a>
+                                    <a href="detail_kit1.html">
+                                        <p>
+                                            <b>
+                                                [ROBOTIME]
+                                                지미의 스튜디오 DIY KIT
+                                            </b>
+                                            <span>28,000 원</span>
+                                            22,500 원
+                                        </p>
+                                    </a>
+                                    <a href="#">
+                                        <div class="btn_qv">
+                                            <p>미리 보기</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="hot_item">
+                                <img src="img/kit2_1.jpg" alt="">
+                                <div class="hot_hov">
+                                    <a href="#">hrt</a>
+                                    <a href="#">
+                                        <p>
+                                            <b>
+                                                [ROBOTIME]
+                                                샘의 서재 DIY KIT
+                                            </b>
+                                            <span>39,000 원</span>
+                                            31,000 원
+                                        </p>
+                                    </a>
+                                    <a href="#">
+                                        <div class="btn_qv">
+                                            <p>미리 보기</p>
+                                            <div class="qv"></div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="hot_item">
+                                <img src="img/kit3_1.jpg" alt="">
+                                <div class="hot_hov">
+                                    <a href="#">hrt</a>
+                                    <a href="#">
+                                        <p>
+                                            <b>
+                                                [ROBOTIME]
+                                                캐시의 플라워하우스 DIY KIT
+                                            </b>
+                                            <span>39,000 원</span>
+                                            31,000 원
+                                        </p>
+                                    </a>
+                                    <a href="#">
+                                        <div class="btn_qv">
+                                            <p>미리 보기</p>
+                                            <div class="qv"></div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="hot_item">
+                                <img src="img/kit4_1.jpg" alt="">
+                                <div class="hot_hov">
+                                    <a href="#">hrt</a>
+                                    <a href="#">
+                                        <p>
+                                            <b>
+                                                [ROBOTIME]
+                                                소호타임 작업실 DIY KIT
+                                            </b>
+                                            <span>33,000 원</span>
+                                            26,500 원
+                                        </p>
+                                    </a>
+                                        <div class="btn_qv">
+                                            <p>미리 보기</p>
+                                        </div>
+                                </div>
+                            </div>
+                        </li>
                     </ul>
                 </div>
                 <div class="qv">
@@ -234,10 +333,10 @@
                                     <figure><img src="img/kit1_4.jpg"></figure>
                                 </div>
                             </figure>
-                            
                         </div>
+
                         <div class="qv_right">
-                            <a href="#">close</a>
+                            <p class="qvX">close</p>
                             <h2>name</h2>
                             <b>price</b>
                             <div class="qv_info">
@@ -274,6 +373,7 @@
                     </div>
                 </div>
             </div>
+            <p></p>
         </div>
 
         <div class="media">
@@ -287,10 +387,10 @@
                 배우기
             </p>
             <div class="indi">
-                <a href="#">01</a>
-                <a href="#">02</a>
-                <a href="#">03</a>
-                <a href="#">04</a>
+                <a class="active">01</a>
+                <a>02</a>
+                <a>03</a>
+                <a>04</a>
             </div>
             <div class="vid">
                 <ul>
@@ -300,34 +400,24 @@
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen>
                         </iframe>
-                        <p>드라마 ‘펜트하우스’ 미니어쳐 만들기</p>
+                        <p class>드라마 ‘펜트하우스’ 미니어쳐 만들기</p>
                     </li>
                     <li>
-                        <iframe width="960" height="540" src="https://www.youtube.com/embed/YKWezFhbsm8"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen>
-                        </iframe>
-                        <p>드라마 ‘펜트하우스’ 미니어쳐 만들기</p>
+                        <iframe width="960" height="540" src="https://www.youtube.com/embed/6Nr7IAx0vrM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <p>'해리포터 그리핀도르 기숙사' 만들기</p>
                     </li>
                     <li>
-                        <iframe width="960" height="540" src="https://www.youtube.com/embed/YKWezFhbsm8"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen>
-                        </iframe>
-                        <p>드라마 ‘펜트하우스’ 미니어쳐 만들기</p>
+                        <iframe width="960" height="540" src="https://www.youtube.com/embed/l1KnJ1KEsOY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <p>'하울의 움직이는 성' 미니어쳐 만들기</p>
                     </li>
                     <li>
-                        <iframe width="960" height="540" src="https://www.youtube.com/embed/YKWezFhbsm8"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen>
+                        <iframe width="960" height="540" src="https://www.youtube.com/embed/uMhKbrWxINY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </iframe>
-                        <p>드라마 ‘펜트하우스’ 미니어쳐 만들기</p>
+                        <p>영화 '미나리 미니어쳐 만들기</p>
                     </li>
                 </ul>
             </div>
+            <p class="brik"></p>
         </div>
 
         <div class="sns">
@@ -353,6 +443,7 @@
                     <p>kakao+</p>
                 </div>
             </div>
+            <p></p>
         </div>
     </main>
 
